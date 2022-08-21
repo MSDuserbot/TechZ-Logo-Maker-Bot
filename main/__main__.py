@@ -35,7 +35,7 @@ async def help(bot, message):
   filters.group | filters.private))
 async def logo(bot, message):
   try:
-    text = message.text.replace("logo","").replace("/","").replace("@TechZLogoMakerBot","").strip().upper()
+    text = message.text.replace("logo","").replace("/","").replace("@LogoMakerXBot","").strip().upper()
     
     if text == "":
       return await message.reply_text(HELP)
@@ -44,10 +44,10 @@ async def logo(bot, message):
     logo = await generate_logo(text)
 
     if "telegra.ph" not in logo:
-      return await x.edit("`❌ Something Went Wrong...`\n\nReport This Error In @TechZBots_Support")
+      return await x.edit("`❌ Something Went Wrong...`\n\nReport This Error In @TamilSupport")
       
     if "error" in logo:
-      return await x.edit(f"`❌ Something Went Wrong...`\n\nReport This Error In @TechZBots_Support \n\n`{logo}`")
+      return await x.edit(f"`❌ Something Went Wrong...`\n\nReport This Error In @TamilSupport \n\n`{logo}`")
       
     await x.edit("`🔄 Done Generated... Now Sending You`")
 
