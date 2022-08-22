@@ -101,7 +101,7 @@ async def logo(bot, message):
 @app.on_callback_query(filters.regex("start_menu"))
 async def start_menu(_,query):
   await query.answer()
-  await query.message.edit(START,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Help", callback_data="help_menu"),InlineKeyboardButton(text=""Dev, url="https://t.me/my_dear_lightbright")]]))
+  await query.message.edit(START,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Help", callback_data="help_menu"),InlineKeyboardButton(text="Dev", url="https://t.me/my_dear_lightbright")]]))
 
 @app.on_callback_query(filters.regex("help_menu"))
 async def help_menu(_,query):
